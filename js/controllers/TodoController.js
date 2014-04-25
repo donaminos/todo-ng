@@ -2,10 +2,11 @@ angular.module('todoNg')
 	.controller('TodoController',function($scope){
 
 		$scope.todos = [];
+		$scope.todo = '';
 
 		$scope.addTodo = function(){
 			var newTodo = $scope.todo;
-			if(newTodo != '' && newTodo != undefined){
+			if(newTodo != ''){
 				$scope.todos.push({'title':newTodo,'done':false, 'editing':false});
 				$scope.todo='';
 			}
